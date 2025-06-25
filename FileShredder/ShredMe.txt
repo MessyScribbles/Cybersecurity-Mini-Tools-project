@@ -1,0 +1,6 @@
+This is a test file for the Secure File Shredder tool.
+Feel free to delete this file using the application.
+Random data: 7f3a2b1c-9d4e-4c8a-8b2f-5e6d7c8b9a0f
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+The quick brown fox jumps over the lazy dog.
+End of test file.

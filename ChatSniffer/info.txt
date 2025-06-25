@@ -1,0 +1,84 @@
+# Chat Packet Sniffer
+
+A minimalistic Python/Tkinter application that captures and displays TCP chat messages sent over a specific port (default: 12345). This tool is useful for educational purposes, debugging, and learning about network traffic in custom chat applications.
+
+---
+
+## What is this?
+
+**Chat Packet Sniffer** is a GUI-based packet sniffer built with Python, Tkinter, and Scapy. It listens on a specified network interface and port, displaying packet summaries and decoded message data in a clean, terminal-like window.
+
+---
+
+## How does it work?
+
+- The app uses **Scapy** to sniff TCP packets on a chosen network interface and port.
+- Each captured packet is processed:
+  - A summary of the packet is shown.
+  - If the packet contains raw data (e.g., chat messages), it attempts to decode and display the message.
+- The GUI is built with **Tkinter** for a simple, minimal look.
+- Packet sniffing runs in a background thread, so the interface remains responsive.
+
+---
+
+## Features
+
+- Minimalistic, white-themed GUI.
+- Real-time display of packet summaries and chat messages.
+- Status label showing the active network interface.
+- Responsive interface (thanks to threading).
+
+---
+
+## How to use
+
+1. **Requirements**
+   - Python 3.7+
+   - [Scapy](https://scapy.net/) (`pip install scapy`)
+   - [Npcap](https://nmap.org/npcap/) (for Windows packet capture)
+   - Tkinter (usually included with Python)
+
+2. **Setup**
+   - Place `VChkr.py` in your project folder.
+   - (Optional) Place your Java chat server/client files in the same folder for testing.
+
+3. **Configure**
+   - Edit `iface_index` in the script to match your active network interface.
+   - Ensure the port in the filter (`tcp port 12345`) matches your chat app.
+
+4. **Run**
+   - Open a terminal as Administrator (Windows).
+   - Run:  
+     ```bash
+     python VChkr.py
+     ```
+   - Start your chat app and send messages. They will appear in the sniffer window.
+
+---
+
+## Summary of Functions
+
+- **packet_callback(packet):**
+  - Called for each captured packet.
+  - Inserts the packet summary and decoded message data (if present) into the text area.
+
+- **start_sniffing():**
+  - Starts Scapy’s `sniff()` with the chosen filter and interface.
+  - Runs in a separate thread to keep the GUI responsive.
+
+- **Tkinter GUI setup:**
+  - Creates a minimal, white-themed window with a text area and status label.
+
+---
+
+## Notes
+
+- Only sniff traffic you are authorized to monitor.
+- For best results, run as Administrator.
+- Works best with unencrypted, plain-text chat protocols.
+
+---
+
+## License
+
+For educational and personal use only.
