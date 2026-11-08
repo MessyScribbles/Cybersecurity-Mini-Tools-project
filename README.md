@@ -7,15 +7,6 @@ I built them as a student to practice what I learned in the Google Cybersecurity
 ![Python](https://img.shields.io/badge/Python-3.7+-3776AB?logo=python&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white)
 ![Status](https://img.shields.io/badge/Purpose-Educational-orange)
-
-## Screenshots
-
-<!-- Add one screenshot per tool in a screenshots/ folder, then uncomment: -->
-<!-- ![ARP Device Scanner](screenshots/arp-scanner.png) -->
-<!-- ![Chat Sniffer](screenshots/chat-sniffer.png) -->
-<!-- ![File Shredder](screenshots/file-shredder.png) -->
-<!-- ![WiFi Analyzer](screenshots/wifi-analyzer.png) -->
-
 ## Tools
 
 | Tool | What it does |
